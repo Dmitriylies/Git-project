@@ -1,24 +1,19 @@
-// let number = 5;
+const numberOfFilms = +prompt('сколько фильмов вы уже посмотрели?', '');
 
-// number = 10;
+const lastFilm = prompt('Один из последних просмотренных фильмов?', ''),
+      lastFilmScore = +prompt('Насколько оцените его?', ''),
+      lastFilm2 = prompt('Один из последних просмотренных фильмов?', ''),
+      lastFilmScore2 = +prompt('Насколько оцените его?', '');
 
-// const persone = 'Alex';
+const personalMovieDB = {
+    count: numberOfFilms,
+    Movie: {},
+    actors: {},
+    geners: [],
+    privat: false,
+};
 
+personalMovieDB.Movie[lastFilm] = lastFilmScore; 
+personalMovieDB.Movie[lastFilm2] = lastFilmScore2; 
 
-// const obj = {
-//     name: 'Dmitriy',
-//     age: '22',
-//     isMaried: false,
-// };
-
-// console.log(obj["name"]);
-
-// const conf = [];
-
-// conf[0] = prompt ("are you here?");
-// conf[1] = prompt ("how old are you?");
-// conf[2] = prompt ("are you maried?");
-
-// document.write(conf)
-
-console.log(15%10);
+console.log( personalMovieDB );
