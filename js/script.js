@@ -1,13 +1,5 @@
 'use strict';
-
-// <first-lesson>-----------/
-
-const numberOfFilms = +prompt('сколько фильмов вы уже посмотрели?', '');
-
-const lastFilm = prompt('Один из последних просмотренных фильмов?', ''),
-      lastFilmScore = +prompt('Насколько оцените его?', ''),
-      lastFilm2 = prompt('Один из последних просмотренных фильмов?', ''),
-      lastFilmScore2 = +prompt('Насколько оцените его?', '');
+ const numberOfFilms = +prompt('сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -17,40 +9,29 @@ const personalMovieDB = {
     privat: false,
 };
 
-personalMovieDB.Movie[lastFilm] = lastFilmScore; 
-personalMovieDB.Movie[lastFilm2] = lastFilmScore2; 
+if (personalMovieDB.count < 10){
+    confirm('просмотренно довольно мало фильмов!');    
+}else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
+    confirm('просмотренно достаточно фильмов!');    
+}else if ( personalMovieDB.count > 30 ) {
+    confirm('Киноман!!');    
+}else {
+    confirm('error!')
+}
 
-console.log( personalMovieDB );
 
-// </first-lesson>-----------/
+for (let i = 0; i < 2; i++) {
+    const lastFilm = prompt('Один из последних просмотренных фильмов?', ''),
+          lastFilmScore = +prompt('Насколько оцените его?', ''); 
 
-// <second-lesson>-----------/
+          if ( lastFilm != null && lastFilm != '' && lastFilm.length < 50 && lastFilmScore != null && lastFilmScore != '') {
+            personalMovieDB.Movie[lastFilm] = lastFilmScore;
+            console.log('done');
+            
+          }else{
+            console.log('error');
+            i--;
+          }
+          console.log(personalMovieDB);
+}
 
-    if ( 4 == 9 ) {
-        console.log('ok!');
-    }else {
-        console.log('not ok!');
-        
-    }
-
-// </second-lesson>-----------/
-
-const num = 50;
-
-( num == 50 ) ? console.log('ok!') : console.log("you're wrong");
-
-switch(num) {
-
-    case 49: 
-        console.log('неверно!');
-        break;
-    case 22:
-        console.log('неверно!');
-        break;    
-    case 50:
-        console.log('Правильно!');
-        break;    
-    default: 
-        console.log('в друной раз!');
-        break;   
-    }
