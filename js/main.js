@@ -252,9 +252,119 @@
 //div.innerHTML = '<h1>Hello world</h1>';// позволяет вставить HTML  структуру
 //div.textContent = 'Hello-Hello!';// добавляет текст на страницу, но HTML структура уже не читается  
 
-div.insertAdjacentHTML('beforebegin', '<h2>hello</h2>');//вставляет HTML перед элементом
-div.insertAdjacentHTML('afterend', '<h2>hello</h2>');//вставляет HTML после элемента
-div.insertAdjacentHTML('afterbegin', '<h2>hello</h2>');//вставляет HTML в начало элемента
-div.insertAdjacentHTML('beforeend', '<h2>hello</h2>');//вставляет HTML в конец элемента
+//div.insertAdjacentHTML('beforebegin', '<h2>hello</h2>');//вставляет HTML перед элементом
+//div.insertAdjacentHTML('afterend', '<h2>hello</h2>');//вставляет HTML после элемента
+//div.insertAdjacentHTML('afterbegin', '<h2>hello</h2>');//вставляет HTML в начало элемента
+//div.insertAdjacentHTML('beforeend', '<h2>hello</h2>');//вставляет HTML в конец элемента
 
+//const btns = document.querySelector('button');
+//const overlay = document.querySelector('.overlay');
+//const link = document.querySelector('.link');
+//const btnsLink = document.querySelectorAll('.btn');
+// btn.forEach((item,i) => {
+    // item.onclick = function() {
+        // alert('aaa');
+    // };
+// });
  
+// btn.onclick = function() {
+    // alert('frfrf')
+// };
+
+//btns[0].addEventListener('click', (e) => {
+//    console.log(e);
+//    
+//});
+
+//let i = 0;
+//const deleteElement = (e) => {
+//    console.log(e.currentTarget);
+//    console.log(e.type);
+    // i++;
+    // if (i == 1) {
+    //     btns.removeEventListener('click', deleteElement);
+    // }
+//};
+//    btns.addEventListener('click', deleteElement);
+//    overlay.addEventListener('click', deleteElement);
+//    
+//    link.addEventListener('click', (e) => {
+//        e.preventDefault();
+//    });
+
+//const func = (e) => {
+//    console.log(e.target);
+//};
+//
+//btnsLink.forEach(btn => {
+//    btn.addEventListener('click', func, {once: true});
+//});
+
+//console.log(document.body.childNodes);
+
+//console.log(document.body.firstChild);
+//console.log(document.body.lastChild);
+
+
+//console.log(document.querySelector('#current').parentNode.parentNode);
+
+//console.log(document.querySelector('[data-current="3"]').nextElementSibling);
+//console.log(document.querySelector('[data-current="3"]').previousElementSibling);
+//
+//console.log(document.body.firstElementChild);
+//console.log(document.body.lastElementChild);
+//
+
+//for (let node of document.body.childNodes) {
+//    if (node.nodeName == '#text') {
+//        continue;
+//    }
+//    console.log(node);
+//}
+
+//touchstart()// при возникновении касания к эл.
+//touchmove()// если палец начинаеться двигаться по эл.
+//touchend()// при отрыве от эл.
+
+//touсhenter()// когда палец наскользио на элемент
+//touchleave()//когда палец проскользио за пределы эл.
+//touchcancel()// когда точка сопрекосновения больше не регистр. на эл.
+
+window.addEventListener('DOMContentLoaded', ()=> {
+
+    const box = document.querySelector('.box') ;
+    box.addEventListener('touchmove', (e)=> {
+        e.preventDefault();
+        console.log(e);
+        
+    });
+
+    //box.addEventListener('touchstart', (e)=> {
+    //    e.preventDefault();
+    //    console.log('move');
+    //});
+//
+    //box.addEventListener('touchend', (e)=> {
+    //    e.preventDefault();
+    //    console.log('end');
+    //});
+});
+
+//e.touсhes//показывает кол-во точек соприкосновения
+//e.targetTouсhes//ол-во точек соприкосновения с эл.
+//e.changedTouсhes//ол-во точек учавтв. в событии с эл.
+
+const script = document.createElement('script');// создадим эл.
+script.src = 'js/test.js';// укажем путь
+script.async = false;
+document.body.append(script);// разместив в конец body
+
+function  loadScript(src) {
+    const script = document.createElement('script');
+script.src = src;
+script.async = false;
+document.body.append(script);
+}
+//таким образом условия будут осуществляться по порядку.
+loadScript('js/test.js');
+loadScript('js/some.js');
