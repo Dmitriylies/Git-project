@@ -1,0 +1,18 @@
+body {
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.btn-block {
+}
+.blue-some {
+}
+button {
+    width: 70px;
+    height: 40px;
+    background-color: rgb(182, 124, 0);
+    border: 3px solid #000;
+    border-radius: 20px;
+}
+.red {
+    background-color: rgb(247, 10, 10);
+}

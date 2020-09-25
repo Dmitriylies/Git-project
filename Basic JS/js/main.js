@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 
 // const options = {
 //     name: 'test',
@@ -330,14 +330,14 @@
 //touchleave()//когда палец проскользио за пределы эл.
 //touchcancel()// когда точка сопрекосновения больше не регистр. на эл.
 
-window.addEventListener('DOMContentLoaded', ()=> {
-
-    const box = document.querySelector('.box') ;
-    box.addEventListener('touchmove', (e)=> {
-        e.preventDefault();
-        console.log(e);
+// window.addEventListener('DOMContentLoaded', ()=> {
+// 
+    // const box = document.querySelector('.box') ;
+    // box.addEventListener('touchmove', (e)=> {
+        // e.preventDefault();
+        // console.log(e);
+    // });
         
-    });
 
     //box.addEventListener('touchstart', (e)=> {
     //    e.preventDefault();
@@ -348,23 +348,23 @@ window.addEventListener('DOMContentLoaded', ()=> {
     //    e.preventDefault();
     //    console.log('end');
     //});
-});
+//});
 
 //e.touсhes//показывает кол-во точек соприкосновения
 //e.targetTouсhes//ол-во точек соприкосновения с эл.
 //e.changedTouсhes//ол-во точек учавтв. в событии с эл.
 
-const script = document.createElement('script');// создадим эл.
-script.src = 'js/test.js';// укажем путь
-script.async = false;
-document.body.append(script);// разместив в конец body
-
-function  loadScript(src) {
-    const script = document.createElement('script');
-script.src = src;
-script.async = false;
-document.body.append(script);
-}
+// const script = document.createElement('script');// создадим эл.
+// script.src = 'js/test.js';// укажем путь
+// script.async = false;
+// document.body.append(script);// разместив в конец body
+// 
+// function  loadScript(src) {
+    // const script = document.createElement('script');
+// script.src = src;
+// script.async = false;
+// document.body.append(script);
+// }
 //таким образом условия будут осуществляться по порядку.
-loadScript('js/test.js');
-loadScript('js/some.js');
+// loadScript('js/test.js');
+// loadScript('js/some.js');
